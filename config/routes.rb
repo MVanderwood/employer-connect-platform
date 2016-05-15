@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root 'homepage#index'
+
   devise_for :links
   devise_for :students
   # The priority is based upon order of creation: first created -> highest priority.
