@@ -11,8 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160515165935) do
-
+ActiveRecord::Schema.define(version: 20160515185920) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,9 +32,12 @@ ActiveRecord::Schema.define(version: 20160515165935) do
     t.string   "city"
     t.string   "state"
     t.text     "description"
-    t.string   "url"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.string   "email_contact"
+    t.string   "website"
+    t.string   "linkedin"
+    t.string   "logo"
   end
 
   add_index "employers", ["email"], name: "index_employers_on_email", unique: true, using: :btree
@@ -79,5 +81,12 @@ ActiveRecord::Schema.define(version: 20160515165935) do
 
   add_index "students", ["email"], name: "index_students_on_email", unique: true, using: :btree
   add_index "students", ["reset_password_token"], name: "index_students_on_reset_password_token", unique: true, using: :btree
+
+  create_table "types", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "link_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end

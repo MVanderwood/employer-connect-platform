@@ -1,0 +1,7 @@
+<h1>Employers</h1>
+
+<% @employers.each do |employer| %>
+  <h2>Company: <%= link_to employer.name, "/employers/#{employer.id}" %></h2>
+  <p><strong>City:</strong> <%= employer.city %></p> 
+  <p><strong>State:</strong> <%= employer.state %></p>
+<% end %>
