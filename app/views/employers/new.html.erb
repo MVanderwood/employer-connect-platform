@@ -1,0 +1,46 @@
+<h1>Create A Company Profile</h1>
+
+<%= form_tag '/employers', method: :post do %>
+  
+  <div>
+    <%= label_tag :name %>
+    <%= text_field_tag :name, @employer.name, id: "employer-form-name" %>
+  </div>
+
+  <div>
+    <%= label_tag :email_contact %>
+    <%= text_field_tag :email_contact, @employer.email_contact, id: "employer-form-email-contact" %>
+  </div>
+
+  <div>
+    <%= label_tag :city %>
+    <%= text_field_tag :city, @employer.city, id: "employer-form-city" %>
+  </div>
+
+  <div>
+    <%= label_tag :state %>
+    <%= text_field_tag :state, @employer.state, id: "employer-form-state" %>
+  </div>
+
+  <div>
+    <%= label_tag :website %>
+    <%= text_field_tag :website, @employer.website, id: "employer-form-website" %>
+  </div>
+  
+  <div>
+    <%= label_tag :linkedin %>
+    <%= text_field_tag :linkedin, @employer.linkedin, id: "employer-form-linkedin" %>
+  </div>
+ 
+  <div>
+    <%= label_tag :logo %>
+    <%= text_field_tag :logo, @employer.logo, id: "employer-form-logo" %>
+  </div>
+
+  <div>
+    <%= label_tag :description %>
+    <%= text_area_tag :description, @employer.description, id: "employer-form-description" %>
+  </div>
+
+  <%= submit_tag "Create Company Profile" %>
+<% end %>
