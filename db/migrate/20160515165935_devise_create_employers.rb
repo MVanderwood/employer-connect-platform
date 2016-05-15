@@ -30,6 +30,12 @@ class DeviseCreateEmployers < ActiveRecord::Migration
       # t.string   :unlock_token # Only if unlock strategy is :email or :both
       # t.datetime :locked_at
 
+      t.string :name
+      t.integer :phone
+      t.string :city
+      t.string :state
+      t.text :description
+      t.string :url
 
       t.timestamps null: false
     end

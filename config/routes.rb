@@ -1,9 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :employers
   root 'homepage#index'
 
-  devise_for :links
-  devise_for :students
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
